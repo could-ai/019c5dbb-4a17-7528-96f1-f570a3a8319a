@@ -1,0 +1,48 @@
+import 'package:couldai_user_app/models/product.dart';
+
+final List<Product> dummyProducts = [
+  const Product(
+    id: '1',
+    title: 'Custom Logo T-Shirts Cotton 100% High Quality',
+    imageUrl: 'https://via.placeholder.com/300?text=T-Shirt',
+    priceMin: 2.50,
+    priceMax: 5.00,
+    moq: 100,
+    supplierName: 'Guangzhou Apparel Co.',
+    yearsActive: 5,
+    isVerified: true,
+  ),
+  const Product(
+    id: '2',
+    title: 'Wireless Bluetooth Headphones Noise Cancelling',
+    imageUrl: 'https://via.placeholder.com/300?text=Headphones',
+    priceMin: 15.00,
+    priceMax: 25.00,
+    moq: 50,
+    supplierName: 'Shenzhen Tech Ltd.',
+    yearsActive: 8,
+    isVerified: true,
+  ),
+  const Product(
+    id: '3',
+    title: 'Stainless Steel Water Bottle Vacuum Insulated',
+    imageUrl: 'https://via.placeholder.com/300?text=Bottle',
+    priceMin: 3.20,
+    priceMax: 4.50,
+    moq: 500,
+    supplierName: 'Yongkang Metalworks',
+    yearsActive: 3,
+    isVerified: false,
+  ),
+  const Product(
+    id: '4',
+    title: 'Smart Watch Series 8 Clone Waterproof',
+    imageUrl: 'https://via.placeholder.com/300?text=SmartWatch',
+    priceMin: 12.00,
+    priceMax: 18.00,
+    moq: 20,
+    supplierName: 'Shenzhen Electronics',
+    yearsActive: 10,
+    isVerified: true,
+  ),
+];
