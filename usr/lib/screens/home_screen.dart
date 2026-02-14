@@ -12,8 +12,9 @@ class HomeScreen extends StatelessWidget {
         title: Container(
           height: 40,
           decoration: BoxDecoration(
-            color: Colors.grey[200],
+            color: Colors.grey[100], // Lighter grey for search bar on white
             borderRadius: BorderRadius.circular(20),
+            border: Border.all(color: Colors.grey.shade300),
           ),
           child: const TextField(
             decoration: InputDecoration(
@@ -56,11 +57,13 @@ class HomeScreen extends StatelessWidget {
               margin: const EdgeInsets.all(16),
               height: 150,
               decoration: BoxDecoration(
-                color: Colors.orange.shade100,
+                color: const Color(0xFFE8F5E9), // Light Mint/Green background
                 borderRadius: BorderRadius.circular(10),
-                image: const DecorationImage(
-                  image: NetworkImage('https://via.placeholder.com/600x300/FFA500/FFFFFF?text=Wholesale+Deals'),
-                  fit: BoxFit.cover,
+                // Using a gradient or pattern instead of just color can look nice too
+                gradient: const LinearGradient(
+                  colors: [Color(0xFF00C853), Color(0xFF69F0AE)],
+                  begin: Alignment.topLeft,
+                  end: Alignment.bottomRight,
                 ),
               ),
               child: const Center(
@@ -71,7 +74,7 @@ class HomeScreen extends StatelessWidget {
                     color: Colors.white,
                     fontSize: 24,
                     fontWeight: FontWeight.bold,
-                    shadows: [Shadow(blurRadius: 10, color: Colors.black45)],
+                    shadows: [Shadow(blurRadius: 10, color: Colors.black26)],
                   ),
                 ),
               ),
@@ -125,9 +128,9 @@ class _CategoryItem extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           CircleAvatar(
-            backgroundColor: Colors.orange.shade50,
+            backgroundColor: const Color(0xFFE8F5E9), // Light Mint background
             radius: 25,
-            child: Icon(icon, color: Colors.orange),
+            child: Icon(icon, color: const Color(0xFF00C853)), // Mint Green Icon
           ),
           const SizedBox(height: 5),
           Text(

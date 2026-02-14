@@ -16,17 +16,24 @@ class AlibabaCloneApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(
-          seedColor: const Color(0xFFFF6600), // Alibaba-like orange
-          primary: const Color(0xFFFF6600),
+          seedColor: const Color(0xFF00C853), // Mint Green / Vibrant Green
+          primary: const Color(0xFF00C853),
           secondary: const Color(0xFF333333),
+          surface: Colors.white,
         ),
         useMaterial3: true,
         appBarTheme: const AppBarTheme(
           backgroundColor: Colors.white,
           foregroundColor: Colors.black,
           elevation: 0,
+          surfaceTintColor: Colors.transparent,
         ),
-        scaffoldBackgroundColor: const Color(0xFFF5F5F5),
+        scaffoldBackgroundColor: Colors.white, // White background as requested
+        bottomNavigationBarTheme: const BottomNavigationBarThemeData(
+          backgroundColor: Colors.white,
+          selectedItemColor: Color(0xFF00C853),
+          unselectedItemColor: Colors.grey,
+        ),
       ),
       initialRoute: '/',
       routes: {

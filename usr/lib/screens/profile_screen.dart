@@ -30,7 +30,7 @@ class ProfileScreen extends StatelessWidget {
                 ),
                 const SizedBox(height: 10),
                 ListTile(
-                  leading: const Icon(Icons.store, color: Colors.orange),
+                  leading: const Icon(Icons.store, color: Color(0xFF00C853)), // Mint Green
                   title: const Text('Start Selling'),
                   subtitle: const Text('Register your business and list products'),
                   trailing: const Icon(Icons.arrow_forward_ios, size: 16),
@@ -40,7 +40,7 @@ class ProfileScreen extends StatelessWidget {
                 ),
                 const Divider(),
                 ListTile(
-                  leading: const Icon(Icons.dashboard, color: Colors.blue),
+                  leading: const Icon(Icons.dashboard, color: Color(0xFF00C853)), // Mint Green
                   title: const Text('Seller Dashboard'),
                   subtitle: const Text('Manage your listings and orders'),
                   trailing: const Icon(Icons.arrow_forward_ios, size: 16),
@@ -70,17 +70,17 @@ class ProfileScreen extends StatelessWidget {
                 ),
                 const SizedBox(height: 10),
                 ListTile(
-                  leading: const Icon(Icons.favorite_border),
+                  leading: const Icon(Icons.favorite_border, color: Colors.black54),
                   title: const Text('Favorites'),
                   onTap: () {},
                 ),
                 ListTile(
-                  leading: const Icon(Icons.history),
+                  leading: const Icon(Icons.history, color: Colors.black54),
                   title: const Text('Browsing History'),
                   onTap: () {},
                 ),
                 ListTile(
-                  leading: const Icon(Icons.request_quote),
+                  leading: const Icon(Icons.request_quote, color: Colors.black54),
                   title: const Text('My RFQs'),
                   onTap: () {},
                 ),
@@ -105,8 +105,8 @@ class UserHeader extends StatelessWidget {
         children: [
           const CircleAvatar(
             radius: 30,
-            backgroundColor: Colors.grey,
-            child: Icon(Icons.person, size: 40, color: Colors.white),
+            backgroundColor: Color(0xFFE8F5E9), // Light Mint
+            child: Icon(Icons.person, size: 40, color: Color(0xFF00C853)), // Mint Green
           ),
           const SizedBox(width: 15),
           Column(
@@ -123,6 +123,7 @@ class UserHeader extends StatelessWidget {
                   minimumSize: const Size(50, 30),
                   tapTargetSize: MaterialTapTargetSize.shrinkWrap,
                   alignment: Alignment.centerLeft,
+                  foregroundColor: const Color(0xFF00C853), // Mint Green text
                 ),
                 child: const Text('Sign In / Register'),
               ),

@@ -9,8 +9,12 @@ class ProductCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Card(
-      elevation: 2,
-      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(8)),
+      elevation: 0, // Flatter look for modern white theme
+      shape: RoundedRectangleBorder(
+        borderRadius: BorderRadius.circular(8),
+        side: BorderSide(color: Colors.grey.shade200), // Subtle border
+      ),
+      color: Colors.white,
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
@@ -19,7 +23,7 @@ class ProductCard extends StatelessWidget {
             child: Container(
               decoration: BoxDecoration(
                 borderRadius: const BorderRadius.vertical(top: Radius.circular(8)),
-                color: Colors.grey[200],
+                color: Colors.grey[100],
                 image: DecorationImage(
                   image: NetworkImage(product.imageUrl),
                   fit: BoxFit.cover,
@@ -53,7 +57,7 @@ class ProductCard extends StatelessWidget {
                 Row(
                   children: [
                     if (product.isVerified)
-                      const Icon(Icons.verified_user, size: 14, color: Colors.blue),
+                      const Icon(Icons.verified_user, size: 14, color: Color(0xFF00C853)), // Mint Green Verified
                     if (product.isVerified) const SizedBox(width: 4),
                     Expanded(
                       child: Text(
